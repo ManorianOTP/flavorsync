@@ -8,7 +8,8 @@ export const theme = createTheme({
     sm: '48em',
     md: '64em',
     lg: '74em',
-    xl: '90em',
+    xl: '160em',
+    xxl: '215em',
   },
   
   colors: {
