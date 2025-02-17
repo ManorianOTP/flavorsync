@@ -9,54 +9,31 @@ import {
   Burger,
   Drawer,
   Stack,
-  ActionIcon,
-  TextInput
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
-import { SearchIcon } from './icons';
 import { ThemeToggle } from './ThemeToggle';
 import Image from 'next/image';
 
-export function Header() {
+export function HeroHeader() {
   const [opened, { toggle }] = useDisclosure();
-
-  const searchButton = (
-    <ActionIcon variant="subtle" color="icon" size="sm" radius='xl'>
-      <SearchIcon />
-    </ActionIcon>
-  );
 
   return (
     <header className={classes.header}>
       <Container size="lg" className={classes.inner}>
         <Group>
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color="icon" />
-          <Group>
-            <Link href="/" className={classes.logoLink}>
-              <div className={classes.logoIcon}>
-                <Image src="/logo.svg" alt="FlavorSync Logo" width={40} height={40} priority />
-              </div>
-              <Text size="lg" fw={700} className={classes.logoText}>
-                FlavorSync
-              </Text>
-            </Link>
-          </Group>
+          <Link href="/" className={classes.logoLink}>
+            <div className={classes.logoIcon}>
+              <Image src="/logo.svg" alt="FlavorSync Logo" width={40} height={40} priority />
+            </div>
+            <Text size="lg" fw={700} className={classes.logoText}>
+              FlavorSync
+            </Text>
+          </Link>
         </Group>
 
-        <TextInput
-          className={classes.search}
-          placeholder="Search recipes..."
-          rightSection={searchButton}
-        />
-
         <Group gap={5} visibleFrom="sm">
-          <Link href="/recipes" className={classes.link}>
-            Recipes
-          </Link>
-          <Link href="/collections" className={classes.link}>
-            Collections
-          </Link>
           <ThemeToggle />
           <Button component={Link} href="/login" variant="subtle" color="icon">
             Sign in
@@ -72,16 +49,6 @@ export function Header() {
           zIndex={1000000}
         >
           <Stack>
-            <TextInput
-              placeholder="Search recipes..."
-              rightSection={searchButton}
-            />
-            <Link href="/recipes" className={classes.link} onClick={toggle}>
-              Recipes
-            </Link>
-            <Link href="/collections" className={classes.link} onClick={toggle}>
-              Collections
-            </Link>
             <Group justify="space-between" align="center">
               <Text size="sm">Dark mode</Text>
               <ThemeToggle />

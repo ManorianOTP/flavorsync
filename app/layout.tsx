@@ -4,7 +4,7 @@ import '@mantine/dates/styles.css';
 import { Inter } from 'next/font/google';
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import { Providers } from './providers';
-import { Header } from '@/components/header/Header';
+import { HeaderWrapper } from '@/components/header/HeaderWrapper';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://flavorsync.app', // TODO: change to the actual URL
+    url: 'https://flavorsync.app',
     title: 'FlavorSync - Your Recipe Hub',
     description: 'Discover, share, and organize your favorite recipes with FlavorSync. Join our community of food lovers and start your culinary journey today.',
     siteName: 'FlavorSync',
@@ -57,7 +57,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers>
-          <Header />
+          <HeaderWrapper />
           {children}
         </Providers>
       </body>

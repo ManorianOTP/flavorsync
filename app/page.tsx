@@ -1,17 +1,54 @@
-import { Container, Title, Text, Button, Stack } from '@mantine/core';
+import { Container, Title, Text, Button, Group } from '@mantine/core';
+import Link from 'next/link';
+import classes from './page.module.css';
 
 export default function Home() {
   return (
-    <Container size="lg" py="xl">
-      <Stack align="center" gap="xl">
-        <Title order={1}>Welcome to FlavorSync</Title>
-        <Text size="lg" c="dimmed" ta="center">
-          Your personal recipe hub for discovering, sharing, and organizing your favorite dishes.
-        </Text>
-        <Button size="lg" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }}>
-          Get Started
-        </Button>
-      </Stack>
-    </Container>
+    <div className={classes.hero}>
+      <Container size="lg">
+        <div className={classes.inner}>
+          <div className={classes.content}>
+            <Title className={classes.title}>
+              Your Personal{' '}
+              <Text component="span" className={classes.highlight} inherit>
+                Recipe Hub
+              </Text>
+            </Title>
+            
+            <Text className={classes.description} mt={30}>
+              Discover, organize, and share your favorite recipes with FlavorSync. 
+              Join our community of food lovers and start your culinary journey today.
+            </Text>
+
+            <Group mt={40}>
+              <Button
+                size="lg"
+                className={classes.control}
+                component={Link}
+                href="/register"
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan' }}
+              >
+                Get Started
+              </Button>
+              
+              <Button
+                size="lg"
+                className={classes.control}
+                component={Link}
+                href="/recipes"
+                variant="default"
+              >
+                Browse Recipes
+              </Button>
+            </Group>
+
+            <Text mt={30} size="sm" c="dimmed">
+              No credit card required. Start for free.
+            </Text>
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 }
