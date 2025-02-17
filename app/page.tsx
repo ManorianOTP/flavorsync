@@ -26,8 +26,8 @@ export default function Home() {
                 className={classes.control}
                 component={Link}
                 href="/register"
-                variant="gradient"
-                gradient={{ from: 'blue', to: 'cyan' }}
+                variant="filled"
+                color="icon"
               >
                 Get Started
               </Button>
@@ -37,7 +37,8 @@ export default function Home() {
                 className={classes.control}
                 component={Link}
                 href="/recipes"
-                variant="default"
+                variant="outline"
+                color="icon"
               >
                 Browse Recipes
               </Button>
