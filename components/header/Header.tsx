@@ -28,7 +28,7 @@ export function Header() {
     setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light');
 
   const searchButton = (
-    <ActionIcon variant="subtle" color="icon" size="sm">
+    <ActionIcon variant="subtle" color="icon" size="sm" radius='xl'>
       <SearchIcon />
     </ActionIcon>
   );
@@ -39,6 +39,7 @@ export function Header() {
       variant="subtle"
       color="icon"
       size="md"
+      radius='xl'
       aria-label="Toggle color scheme"
       className={classes.themeToggle}
     >

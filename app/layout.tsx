@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://flavorsync.app',
+    url: 'https://flavorsync.app', // TODO: change to the actual URL
     title: 'FlavorSync - Your Recipe Hub',
     description: 'Discover, share, and organize your favorite recipes with FlavorSync. Join our community of food lovers and start your culinary journey today.',
     siteName: 'FlavorSync',
