@@ -54,7 +54,7 @@ export default function RegisterPage() {
               required
             />
 
-            <Button radius="xl" type="submit" fullWidth>
+            <Button type="submit" radius="xl" color="icon">
               Create account
             </Button>
           </Stack>
@@ -62,7 +62,7 @@ export default function RegisterPage() {
 
         <Text ta="center" mt="md">
           Already have an account?{' '}
-          <Anchor component={Link} href="/login" fw={700}>
+          <Anchor component={Link} href="/login" fw={700} c="icon">
             Sign in
           </Anchor>
         </Text>

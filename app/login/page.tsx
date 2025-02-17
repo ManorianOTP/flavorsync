@@ -40,7 +40,7 @@ export default function LoginPage() {
               required
             />
 
-            <Button radius="xl" type="submit" fullWidth>
+            <Button type="submit" radius="xl" color="icon">
               Sign in
             </Button>
           </Stack>
@@ -48,7 +48,7 @@ export default function LoginPage() {
 
         <Text ta="center" mt="md">
           Don&apos;t have an account?{' '}
-          <Anchor component={Link} href="/register" fw={700}>
+          <Anchor component={Link} href="/register" fw={700} c="icon">
             Register
           </Anchor>
         </Text>
