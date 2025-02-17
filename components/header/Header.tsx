@@ -16,7 +16,8 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
-import { LogoIcon, SearchIcon, SunIcon, MoonIcon } from './icons';
+import { SearchIcon, SunIcon, MoonIcon } from './icons';
+import Image from 'next/image';
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure();
@@ -54,10 +55,10 @@ export function Header() {
         <Group>
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color="icon" />
           <Group>
-            <div className={classes.logoIcon}>
-              <LogoIcon />
-            </div>
             <Link href="/" className={classes.logoLink}>
+              <div className={classes.logoIcon}>
+                <Image src="/logo.svg" alt="FlavorSync Logo" width={40} height={40} priority />
+              </div>
               <Text size="lg" fw={700} className={classes.logoText}>
                 FlavorSync
               </Text>

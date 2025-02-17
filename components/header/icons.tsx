@@ -1,33 +1,5 @@
 import classes from './Header.module.css';
 
-export function LogoIcon() {
-  return (
-    <svg 
-      width="40" 
-      height="40" 
-      viewBox="0 0 40 40" 
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M8 22C8 16.4772 12.4772 12 18 12H22C27.5228 12 32 16.4772 32 22V28H8V22Z"
-        fill="currentColor"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M20 6C23.866 6 27 9.13401 27 13C27 13.3407 26.9716 13.6748 26.9171 14M20 6C16.134 6 13 9.13401 13 13C13 13.3407 13.0284 13.6748 13.0829 14M20 6V14M26.9171 14C26.4929 16.8354 24.1822 19.0961 21.3191 19.4583M13.0829 14C13.5071 16.8354 15.8178 19.0961 18.6809 19.4583M26.9171 14H13.0829"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <rect x="6" y="28" width="28" height="4" rx="2" fill="currentColor"/>
-    </svg>
-  );
-}
-
 export function SearchIcon() {
   return (
     <svg

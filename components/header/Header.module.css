@@ -19,10 +19,12 @@
 .logoLink {
   text-decoration: none;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-sm);
 }
 
 .logoIcon {
-  color: var(--mantine-color-icon-filled);
   display: flex;
   align-items: center;
 }
