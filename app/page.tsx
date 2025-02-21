@@ -20,7 +20,7 @@ export default function Home() {
               Join our community of food lovers and start your culinary journey today.
             </Text>
 
-            <Group mt={40}>
+            <Group mt={40} justify="center">
               <Button
                 size="lg"
                 className={classes.control}
