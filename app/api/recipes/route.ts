@@ -28,7 +28,7 @@ export const mockRecipes: Recipe[] = [
       'Combine pasta with egg mixture and pancetta',
       'Season with black pepper'
     ],
-    rating: 4.8,
+    rating: 4.5,
     tags: ['Italian', 'Pasta', 'Quick', 'Traditional'],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -57,7 +57,7 @@ export const mockRecipes: Recipe[] = [
       'Bake until crust is golden',
       'Garnish with fresh basil'
     ],
-    rating: 4.9,
+    rating: 5.0,
     tags: ['Italian', 'Pizza', 'Vegetarian'],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -88,7 +88,7 @@ export const mockRecipes: Recipe[] = [
       'Add mascarpone mixture and repeat',
       'Dust with cocoa powder and chill'
     ],
-    rating: 4.9,
+    rating: 3.5,
     tags: ['Italian', 'Dessert', 'No-Bake'],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -118,7 +118,7 @@ export const mockRecipes: Recipe[] = [
       'Assemble bowls with hot broth',
       'Add toppings and serve'
     ],
-    rating: 4.7,
+    rating: 2.5,
     tags: ['Japanese', 'Soup', 'Complex'],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -148,7 +148,7 @@ export const mockRecipes: Recipe[] = [
       'Toast the buns',
       'Assemble with toppings and sauce'
     ],
-    rating: 4.6,
+    rating: 1.5,
     tags: ['American', 'Beef', 'Quick', 'Grilling'],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()

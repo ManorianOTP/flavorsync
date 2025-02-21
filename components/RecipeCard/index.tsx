@@ -1,4 +1,4 @@
-import { Card, Image, Text, Badge, Group, Stack, Button } from '@mantine/core';
+import { Card, Image, Text, Badge, Group, Stack, Button, Rating } from '@mantine/core';
 import { Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 import type { Recipe } from '../../app/types/recipe';
@@ -22,9 +22,19 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
             />
           </Card.Section>
 
-          <Text fw={500} size="lg" lineClamp={2}>
-            {recipe.title}
-          </Text>
+          <Group justify="space-between" align="center" wrap="nowrap">
+            <Text fw={500} size="lg" lineClamp={2}>
+              {recipe.title}
+            </Text>
+            <Group gap={4} wrap="nowrap">
+              <Rating value={recipe.rating || 0} fractions={2} readOnly size="sm" />
+              {recipe.rating && (
+                <Text size="sm" c="dimmed">
+                  ({recipe.rating.toFixed(1)})
+                </Text>
+              )}
+            </Group>
+          </Group>
 
           <Text size="sm" c="dimmed" lineClamp={2}>
             {recipe.description}

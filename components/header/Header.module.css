@@ -96,4 +96,63 @@
   .logoText {
     display: none;
   }
+}
+
+.userButton {
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  }
+}
+
+.scrapeButton {
+  transition: all 200ms ease;
+  height: 32px;
+  width: 32px;
+}
+
+.plusButton {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  z-index: 1;
+  transition: all 200ms ease;
+}
+
+.plusButton.animating {
+  &:hover {
+    background-color: transparent !important;
+    transform: none !important;
+  }
+}
+
+.rightSectionWrapper {
+  position: absolute;
+  overflow: hidden;
+  height: 32px;
+  width: 34px;
+  right: 0;
+  border-radius: 0 var(--mantine-radius-sm) var(--mantine-radius-sm) 0;
+}
+
+.fillAnimation {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: var(--mantine-color-yellow-5);
+  opacity: 0;
+  transition: all 350ms ease-out;
+  pointer-events: none;
+  transform: translate(50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+.fillAnimation.active {
+  transform: translate(50%, -50%) scale(30);
+  opacity: 0.5;
 } 
