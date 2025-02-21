@@ -119,25 +119,31 @@ export default function NewRecipePage() {
 
           <Group grow>
             <NumberInput
-              label="Prep Time (minutes)"
+              label="Prep Time"
+              description="(minutes)"
               placeholder="Enter prep time"
               value={recipe.prepTime}
               onChange={(value) => setRecipe({ ...recipe, prepTime: typeof value === 'number' ? value : 0 })}
               min={0}
             />
             <NumberInput
-              label="Cook Time (minutes)"
+              label="Cook Time"
+              description="(minutes)"
               placeholder="Enter cook time"
               value={recipe.cookTime}
               onChange={(value) => setRecipe({ ...recipe, cookTime: typeof value === 'number' ? value : 0 })}
               min={0}
             />
-            <TextInput
-              label="Servings"
-              placeholder="Enter number of servings"
-              value={recipe.servings}
-              onChange={(e) => setRecipe({ ...recipe, servings: e.target.value })}
-            />
+            <Stack>
+              <div/>
+              <NumberInput
+                label="Servings"
+                placeholder="Enter number of servings"
+                value={Number(recipe.servings)}
+                onChange={(value) => setRecipe({ ...recipe, servings: String(value || 1) })}
+                min={1}
+              />
+            </Stack>
           </Group>
 
           <Title order={3} mt="md">Ingredients</Title>
